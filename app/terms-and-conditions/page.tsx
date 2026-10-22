@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12 font-sans text-lg leading-9 text-neutral-900 [&_h1]:mb-6 [&_h1]:text-5xl [&_h1]:font-bold [&_h2]:mb-4 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-bold [&_p]:my-4 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-8">
+    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+    <main className="mx-auto max-w-4xl px-6 py-12 font-sans text-lg leading-9 [&_h1]:mb-6 [&_h1]:text-5xl [&_h1]:font-bold [&_h2]:mb-4 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-bold [&_p]:my-4 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-8">
       <h1>Terms and Conditions</h1>
       <p>
         <strong>Last Updated:</strong> October 2026
@@ -25,7 +26,7 @@ export default function TermsPage() {
         <strong>Developer / legal entity:</strong> {DEV}
         <br />
         <strong>Contact:</strong>{" "}
-        <a className="text-blue-700 underline" href={`mailto:${EMAIL}`}>
+        <a className="text-blue-700 underline dark:text-blue-400" href={`mailto:${EMAIL}`}>
           {EMAIL}
         </a>
       </p>
@@ -49,7 +50,9 @@ export default function TermsPage() {
       </p>
       <ul>
         <li>Select applications to restrict</li>
-        <li>Create custom blocking schedules</li>
+        <li>Create custom blocking schedules and daily limits</li>
+        <li>Track screen-time analytics, focus sessions, goals and sleep</li>
+        <li>Optional mood tracking, family profiles and context rules</li>
         <li>Encourage healthier digital habits</li>
       </ul>
       <p>
@@ -75,10 +78,19 @@ export default function TermsPage() {
           <strong>Device Administrator Permission (Optional):</strong> Helps
           prevent bypassing of restrictions while active.
         </li>
+        <li>
+          <strong>Other permissions:</strong> display over other apps,
+          notifications, exact alarms, run at startup, and optionally physical
+          activity, Wi-Fi and location for the features you choose to use.
+        </li>
       </ul>
       <p>
         By granting these permissions, you acknowledge that they are necessary
-        for the App to function as intended.
+        for the App to function as intended. Our{" "}
+        <a className="text-blue-700 underline dark:text-blue-400" href="/privacy-policy">
+          Privacy Policy
+        </a>{" "}
+        explains how they are used.
       </p>
 
       <h2>4. User Responsibilities</h2>
@@ -102,14 +114,21 @@ export default function TermsPage() {
         <li>Manual permission changes by the user</li>
       </ul>
 
-      <h2>6. Intellectual Property</h2>
+      <h2>6. Not Medical or Professional Advice</h2>
+      <p>
+        Mood, sleep, step and focus features are for personal wellbeing
+        awareness only. They are not medical advice and do not replace a
+        qualified professional.
+      </p>
+
+      <h2>7. Intellectual Property</h2>
       <p>
         All content, trademarks, logos, graphics, and software associated with
         the {APP} are the property of {DEV}. Unauthorized copying,
         distribution, or modification is prohibited.
       </p>
 
-      <h2>7. Limitation of Liability</h2>
+      <h2>8. Limitation of Liability</h2>
       <p>
         To the maximum extent permitted by law, {DEV} shall not be liable for
         any indirect, incidental, special, or consequential damages resulting
@@ -121,33 +140,33 @@ export default function TermsPage() {
         <li>Software conflicts or system restrictions</li>
       </ul>
 
-      <h2>8. Disclaimer of Warranties</h2>
+      <h2>9. Disclaimer of Warranties</h2>
       <p>
         The App is provided “as is” without warranties of any kind, whether
         express or implied. We do not guarantee uninterrupted or error-free
         operation.
       </p>
 
-      <h2>9. Termination</h2>
+      <h2>10. Termination</h2>
       <p>
         We reserve the right to suspend or terminate access to the App if you
         violate these Terms. You may discontinue use at any time by
         uninstalling the App.
       </p>
 
-      <h2>10. Modifications to Terms</h2>
+      <h2>11. Modifications to Terms</h2>
       <p>
         We may update these Terms periodically. Continued use of the App after
         changes constitutes acceptance of the updated Terms.
       </p>
 
-      <h2>11. Governing Law</h2>
+      <h2>12. Governing Law</h2>
       <p>
         These Terms shall be governed by applicable laws without regard to
         conflict of law principles.
       </p>
 
-      <h2>12. Contact Information</h2>
+      <h2>13. Contact Information</h2>
       <p>If you have questions regarding these Terms, contact:</p>
       <p>
         <strong>{DEV}</strong>
@@ -155,10 +174,11 @@ export default function TermsPage() {
         App: {APP} ({PKG})
         <br />
         Email:{" "}
-        <a className="text-blue-700 underline" href={`mailto:${EMAIL}`}>
+        <a className="text-blue-700 underline dark:text-blue-400" href={`mailto:${EMAIL}`}>
           {EMAIL}
         </a>
       </p>
     </main>
+    </div>
   );
 }
